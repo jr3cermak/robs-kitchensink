@@ -1,0 +1,42 @@
+This is the boilerplate example for creating a C API wrapper in Python.
+
+http://en.wikibooks.org/wiki/Python_Programming/Extending_with_C
+
+Python API references:
+  * http://docs.python.org/ext/ext.html
+  * http://docs.python.org/api/api.html
+
+Python packages you will need:
+  * python-dev or python-devel
+
+Copy the example code for:
+  * hellomodule.c
+  * setup.py
+
+Build the shared library.
+
+$ python setup.py build
+
+Change directory to the .so file:
+
+cd build/lib.linux-x86_64-2.7 (your directory may be different)
+
+ls -l:
+
+-rwxrwxr-x. 1 ec2-user ec2-user 15856 Oct 25 18:00 hello.so
+
+Run the example:
+
+$ python
+Python 2.7.3 (default, Jul 24 2012, 11:41:40) 
+[GCC 4.6.3 20120306 (Red Hat 4.6.3-2)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import hello
+>>> hello.say_hello("World")
+Hello World!
+>>> 
+
+When you are happy, copy the .so to somewhere PYTHONPATH
+can find it.
+
+Now we apply this knowledge to gain access to the UDUNITS-2 C API.

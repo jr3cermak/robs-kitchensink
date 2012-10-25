@@ -1,0 +1,8 @@
+CHANGELOG
+
+2012-10-25:
+  Resurrect a code from a previous project.
+  Ref: https://github.com/Unidata/UDUNITS-2/issues/3
+  Ref: http://www.unidata.ucar.edu/support/help/MailArchives/udunits/msg00661.html
+  Ref: https://db.aoos.org/wiki/index.php/AOOS_Python#UDUNITS2
+  Placed in public GitHub: jr3cermak
