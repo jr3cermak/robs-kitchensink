@@ -9,3 +9,44 @@ incorporate them.
 
 Alternate code:
   * http://code.google.com/p/cfunits-python/
+
+More detailed information about how to compile and resources on
+how to integrate C code and libraries with python can be found in
+example/README.
+
+General steps to work with this code:
+  * Edit setup.py to find your UDUNITS2 library and include files
+  * python setup.py build
+  * cd build/(build_directory)
+  * python
+    * import udunits
+    * .... see example below ....
+
+To use the module as a python module, make sure the .so file is
+accessible in the standard python path and/or in any path 
+defined by PYTHONPATH.  The UDUNITS library must be found in
+the standard system path and/or LD_LIBRARY_PATH.
+
+Notes:
+
+Ouptut:
+
+    No error: [0, slope, intercept]
+    Errors: [error code, message #1, message #2]
+        error code is negative 
+
+Example run:
+
+$ python
+Python 2.4.3 (#1, May 24 2008, 13:47:28) 
+[GCC 4.1.2 20070626 (Red Hat 4.1.2-14)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import udunits
+>>> udunits.udunits('degC','degF')
+[0, 1.7999992370605469, 32.0]
+>>> udunits.udunits('hour','minute')
+[0, 60.0, 0.0]
+>>> udunits.udunits('hour','day')
+[0, 0.041666667908430099, 0.0]
+>>> udunits.udunits('day','hour')
+[0, 24.0, 0.0]
