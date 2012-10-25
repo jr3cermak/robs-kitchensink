@@ -1,0 +1,15 @@
+The fabled kitchen sink junk drawer that is chuck full of 
+potentially useful stuff.  This repository has several
+directories by programming language and then by project.
+
+A project will be promoted into its own repository when it
+gets large enough.
+
+Current directories and projects:
+
+Directory Project
+
+python/                           : Experimental python modules
+
+          udunits                 : python udunits-2 API
+          sqlite                  : reusable sqlite functions

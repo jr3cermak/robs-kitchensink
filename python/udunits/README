@@ -1,0 +1,11 @@
+Implementation of a python module on top of udunits2 C API.
+
+NOTES
+
+This is highly experimental code.  Current code works, but tends to
+segfault if used multiple times within a python program.  I believe
+this is caused by memory leaks.  If you make code improvements, I will
+incorporate them.
+
+Alternate code:
+  * http://code.google.com/p/cfunits-python/
