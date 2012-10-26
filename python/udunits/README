@@ -29,7 +29,7 @@ the standard system path and/or LD_LIBRARY_PATH.
 
 Notes:
 
-Ouptut:
+Output:
 
     No error: [0, slope, intercept]
     Errors: [error code, message #1, message #2]

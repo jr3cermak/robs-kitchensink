@@ -9,3 +9,5 @@ CHANGELOG
   Ref: http://www.unidata.ucar.edu/support/help/MailArchives/udunits/msg00661.html
   Ref: https://db.aoos.org/wiki/index.php/AOOS_Python#UDUNITS2
   Placed in public GitHub: jr3cermak
+  Fixed typo in README
+  Tested code on Amazon EC2 Fedora Core 16, udunits 2.1.24: success
