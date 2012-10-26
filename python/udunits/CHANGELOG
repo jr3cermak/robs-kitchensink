@@ -1,5 +1,8 @@
 CHANGELOG
 
+2009-03-21:
+  Initial creation of udunits python module.  
+
 2012-10-25:
   Resurrect a code from a previous project.
   Ref: https://github.com/Unidata/UDUNITS-2/issues/3
