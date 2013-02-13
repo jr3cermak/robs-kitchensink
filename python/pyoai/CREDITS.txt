@@ -24,3 +24,12 @@ Thijs Janssen for a bug report.
 
 Many thanks go to Henk Ellermann at the library of Erasmus University
 Rotterdam for making this project possible.
+
+Fork of Infrae oaipmh module in 2013
+====================================
+
+Copyright (c) 2013 - 2013 Rob Cermak. All rights reserved.
+Original LICENSE.txt for this project maintained for pyoai
+or oaipmh python module.
+
+Rob Cermak <rob.cermak@gmail.com> - fork on 2.4.5dev

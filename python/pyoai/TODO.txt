@@ -1,6 +1,7 @@
 TODO
 ====
 
-* Handle 'description' field in various places
+* Finish build out of OAI-PMH iso19139 support
 
-* compression support?
+* Look at ways to optimize for harvesting records
+  for input to Apache SOLR

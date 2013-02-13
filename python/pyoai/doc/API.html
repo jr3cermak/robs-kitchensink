@@ -30,6 +30,13 @@ instance. This registry contains the metadata schemas that are
 understood by client. If it isn't supplied, a default and global
 schema registry will be used, with at least support for the
 <tt class="literal"><span class="pre">oai_dc</span></tt> metadata scheme.</p>
+<p>
+Supported metadata schemes:
+<ul>
+<p>oai_dc, iso19139(1)</p>
+<p>(1) bare bones core added; please feel free to expand</p>
+</ul>
+</p>
 <p>The returned instance is a proxy object with methods that can be
 used to invoke the corresponding OAI-PMH requests to the server. The
 methods are named after the corresponding verbs of the OAI-PMH

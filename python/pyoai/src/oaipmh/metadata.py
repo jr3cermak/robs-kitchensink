@@ -105,5 +105,14 @@ oai_dc_reader = MetadataReader(
     'dc' : 'http://purl.org/dc/elements/1.1/'}
     )
 
-
-    
+oai_iso19139_reader = MetadataReader(
+    fields={
+    'title':       ('textList', 'gmd:MD_Metadata/gmd:identificationInfo/gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title/gco:CharacterString/text()')
+    },
+    namespaces={  
+    'gmd': 'http://www.isotc211.org/2005/gmd',
+    'gts': 'http://www.isotc211.org/2005/gts',
+    'gco': 'http://www.isotc211.org/2005/gco',
+    'gml': 'http://www.opengis.net/gml',
+    'geonet': 'http://www.fao.org/geonetwork'}
+    )

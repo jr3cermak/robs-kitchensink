@@ -31,6 +31,11 @@ API
   schema registry will be used, with at least support for the
   ``oai_dc`` metadata scheme.
 
+  Supported metadata schemes:
+    oai_dc, iso19139(1)
+
+    (1) bare bones code added; please feel free to expand
+
   The returned instance is a proxy object with methods that can be
   used to invoke the corresponding OAI-PMH requests to the server. The
   methods are named after the corresponding verbs of the OAI-PMH
