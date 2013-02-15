@@ -3,10 +3,10 @@ from os.path import join, dirname
 
 setup(
     name='pyoai',
-    version='2.4.5dev',
+    version='2.4.6.b',
     author='Infrae',
-    author_email='info@infrae.com',
-    url='http://www.infrae.com/download/oaipmh',
+    author_email='rob.cermak@gmail.com',
+    url='https://github.com/jr3cermak/robs-kitchensink/tree/master/python/pyoai',
     classifiers=["Development Status :: 4 - Beta",
                  "Programming Language :: Python",
                  "License :: OSI Approved :: BSD License",

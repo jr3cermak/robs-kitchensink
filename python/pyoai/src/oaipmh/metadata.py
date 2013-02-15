@@ -116,3 +116,49 @@ oai_iso19139_reader = MetadataReader(
     'gml': 'http://www.opengis.net/gml',
     'geonet': 'http://www.fao.org/geonetwork'}
     )
+
+# mets uses: xmlns="http://www.loc.gov/METS/"
+# Since it is in the default namespace, we have remap each element
+# into its own namespace: mets (requirement of lxml & etree)
+# ORIG: mets/dmdSec/mdWrap/xmlData/mods:mods/mods:titleInfo/mods:title
+# USE : mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo/mods:title
+oai_mets_reader = MetadataReader(
+    fields={
+    'title':       ('textList', 'mets:mets/mets:dmdSec/mets:mdWrap/mets:xmlData/mods:mods/mods:titleInfo/mods:title/text()')
+    },
+    namespaces={
+    'mets': 'http://www.loc.gov/METS/',
+    'mods': 'http://www.loc.gov/mods/v3'}
+    )
+
+oai_ore_reader = MetadataReader(
+    fields={
+    'title':       ('textList', 'atom:entry/atom:title/text()')
+    },
+    namespaces={  
+    'atom':      'http://www.w3.org/2005/Atom',
+    'ore':       'http://www.openarchives.org/ore/terms/',
+    'oreatom':   'http://www.openarchives.org/ore/atom/',
+    'dcterms':   'http://purl.org/dc/terms/'}
+    )
+
+oai_qdc_reader = MetadataReader(
+    fields={
+    'title':       ('textList', 'qdc:qualifieddc/dc:title/text()')
+    },
+    namespaces={  
+    'dc':       'http://purl.org/dc/elements/1.1/',
+    'dcterms':  'http://purl.org/dc/terms/',
+    'qdc':      'http://epubs.cclrc.ac.uk/xmlns/qdc/'}
+    )
+
+oai_rdf_reader = MetadataReader(
+    fields={
+    'title':       ('textList', 'rdf:RDF/ow:Publication/dc:title/text()')
+    },
+    namespaces={
+    'rdf':      'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+    'ow':       'http://www.ontoweb.org/ontology/1#',
+    'dc':       'http://purl.org/dc/elements/1.1/',
+    'ds':       'http://dspace.org/ds/elements/1.1/'}
+    )

@@ -4,6 +4,7 @@ class BadArgumentError(Exception):
     pass
 
 def validate(argspec, dict):
+    # set exclusive flag if necessary
     exclusive = None
     for arg_name, arg_type in argspec.items():
         if arg_type == 'exclusive':
@@ -26,6 +27,12 @@ def validate(argspec, dict):
             msg = "Argument required but not found: %s" % arg_name
             if not dict.has_key(arg_name):
                 raise BadArgumentError, msg 
+    # check for verb_ override tag to override request verb
+    for arg_name, arg_type in argspec.items():
+        # add override request verb to argument list
+        if arg_name == 'verb_':
+          dict[arg_name] = arg_type
+
     return
         
 class ValidationSpec(object):
@@ -34,6 +41,7 @@ class ValidationSpec(object):
         'metadataPrefix':'required'
         }
     GetMetadata = {
+        'verb_':'GetRecord',
         'identifier':'required',
         'metadataPrefix':'required'
         }

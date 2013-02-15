@@ -1,7 +1,39 @@
 Changelog
 =========
+2.4.6.b (unreleased)
+~~~~~~~~~~~~~~~~~~
+Changes
+-------
+  * oai_dc metadata is not adequate for our work (1)
+  * Completed GetMetadata() implementation (2)
+  * getRecord: added support for iso19139
+  * Add support for mets
+    - Beware of default namespace use and the complications with lxml
+  * Add support for qdc
+  * Add support for ore
+  * Add support for rdf
+    - ListRecords has a kludge to convert " & " to " &amp; " 
+  * TODO
+    - Refactor support for called functions
+    - Complete more of the documentation
 
-2.4.5.a
+(1) Current coding will not be focused on the "reader" functions.  We have
+    minimally implemented them to allow the 'title' to be minimally harvested
+    using the getMap() function of the client.  We are more interested
+    in the GetMetadata() function that allows us to capture the raw XML.
+    These readers should actually be abstracted so the code does not need
+    to be modified for the folks using this python module.  For now, the
+    code base is very straightforward to customize what the getMap() returns.
+
+(2) It looks like the function names chosen initially mirrored the verbs being
+    used as part of the request to OAI services.  This assumption is not valid
+    and does not allow for other function calls to be created.  A workaround
+    has been implemented such that the OAI verb can be specifically set for
+    the function call.  It also looks like all the functions explicitly make
+    a call to the OAI server.  This needs refactoring.  The layout of the
+    function calls code is equisite.
+
+2.4.6.a (unreleased)
 ~~~~~~~~~~~~~~~~~~
 - Update 1: Forward port changes made in source version 2.4.4.  Fork 2.4.5dev
   from git://github.com/infrae/pyoai.git into
@@ -14,7 +46,7 @@ Changelog
     * Update doc/API.* document with ISO19139 info
     * TODO: Implement getRecord to work with ISO19139
 
-2.4.5 (unreleased):
+2.4.5dev (unreleased):
 ~~~~~~~~~~~~~~~~~~
 
 - Added unofficial GetMetadata verb in server and client. GetMetadata is 

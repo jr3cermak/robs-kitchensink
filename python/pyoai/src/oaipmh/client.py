@@ -61,6 +61,12 @@ class BaseClient(common.OAIPMH):
         
         # now call underlying implementation
         method_name = verb + '_impl'
+
+        # allow override of verb to send in the request vs method_name
+        if 'verb_' in kw.keys():
+          verb = kw['verb_']
+          del kw['verb_']
+
         return getattr(self, method_name)(
             kw, self.makeRequestErrorHandling(verb=verb, **kw))    
 
@@ -270,6 +276,10 @@ class BaseClient(common.OAIPMH):
 
     def makeRequestErrorHandling(self, **kw):
         xml = self.makeRequest(**kw)
+        if kw['metadataPrefix']=='rdf' and kw['verb']=='ListRecords':
+          # Some metadata is not encoding & as &amp;
+          xml_tmp = xml.replace(' & ',' &amp; ')
+          xml = xml_tmp
         try:
             tree = self.parse(xml)
         except SyntaxError:
