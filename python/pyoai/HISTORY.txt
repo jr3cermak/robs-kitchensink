@@ -13,6 +13,7 @@ Changes
   * Add support for ore
   * Add support for rdf
     - ListRecords has a kludge to convert " & " to " &amp; " 
+    - Must have metadataPrefix as an argument
   * TODO
     - Refactor support for called functions
     - Complete more of the documentation

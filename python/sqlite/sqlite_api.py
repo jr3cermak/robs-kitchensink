@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 import sys
 import datetime
 
@@ -7,14 +5,17 @@ import datetime
 ##
 try:
   import sqlite3 as sqlite
-except:
-  import sqlite as sqlite
-
-if not('sqlite' in dir()):
-  print "WARNING: Could not find sqlite database support!"
-  sys.exit()
-
+except ImportError:
+  try:
+    import sqlite as sqlite
+  except ImportError:
+    try:
+      from pysqlite2 import dbapi2 as sqlite
+    except ImportError:
+      raise ImportError, "WARNING: Could not find sqlite database support!"
+      
 # CLASS FOR SQLITE
+##
 
 class sql:
   # Open a database and supply a connection and cursor

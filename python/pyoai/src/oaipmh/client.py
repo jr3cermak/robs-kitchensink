@@ -276,7 +276,7 @@ class BaseClient(common.OAIPMH):
 
     def makeRequestErrorHandling(self, **kw):
         xml = self.makeRequest(**kw)
-        if kw['metadataPrefix']=='rdf' and kw['verb']=='ListRecords':
+        if 'metadataPrefix' in kw.keys() and kw['metadataPrefix']=='rdf' and kw['verb']=='ListRecords':
           # Some metadata is not encoding & as &amp;
           xml_tmp = xml.replace(' & ',' &amp; ')
           xml = xml_tmp
