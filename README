@@ -11,7 +11,8 @@ Directory Project
 
 python/                           : Experimental python modules
 
-          udunits                 : python udunits-2 API
-          sqlite                  : reusable sqlite functions
           pyoai                   : fork of github.com/infrae/pyoai
+          sqlite                  : reusable sqlite functions
+          udunits                 : python udunits-2 API
+          utils                   : miscellaneous code and functions
 
