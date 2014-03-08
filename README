@@ -9,6 +9,9 @@ Current directories and projects:
 
 Directory Project
 
+Arduino/
+                                  : Experimental arduino sketches
+
 python/                           : Experimental python modules
 
           pyoai                   : fork of github.com/infrae/pyoai
