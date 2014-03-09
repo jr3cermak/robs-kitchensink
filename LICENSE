@@ -1,8 +1,9 @@
    The default license for this entire git repository is Apache 2.0.  
    This license may be overridden by a LICENSE file within a project
-   subdirectory.
+   subdirectory (i.e. maintaining original license of imported open
+   source code from another project).
 
-   Copyright 2012-2013 Rob Cermak
+   Copyright 2012-2014 Rob Cermak
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
