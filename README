@@ -19,3 +19,5 @@ python/                           : Experimental python modules
           udunits                 : python udunits-2 API
           utils                   : miscellaneous code and functions
 
+SPECS/
+                                  : Misc spec files

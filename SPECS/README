@@ -1,0 +1,10 @@
+SPECS: Misc RPM spec files for options they really should have in the first place
+
+  libkml.spec       : Much needed wrapper for Google's github
+                    : libkml repo "Reference implementation of OGC KML 2.2"
+
+  gdal.spec         : Updated FC20 spec to add OGR libkml driver
+
+  mapserver.spec    : Updated FC20 spec to add --with-kml
+
+
