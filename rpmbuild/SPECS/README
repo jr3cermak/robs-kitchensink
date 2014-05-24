@@ -1,4 +1,4 @@
-SPECS: Misc RPM spec files for options they really should have in the first place
+SPECS: Misc RPM spec files for options we need today
 
   libkml.spec       : Much needed wrapper for Google's github
                     : libkml repo "Reference implementation of OGC KML 2.2"
