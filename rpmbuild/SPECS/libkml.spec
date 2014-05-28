@@ -8,8 +8,17 @@ License:        BSD
 URL:            https://github.com/google/libkml/
 Source:         https://github.com/google/libkml/archive/libkml-%{version}.tar.gz
 
-BuildRequires:  expat-devel file curl-devel zlib-devel
+# You need to build the source tarball.  The version number is
+# arbitrary!
+# Visit the github site above.  Download the source master using zip.
+# (1) wget https://github.com/google/libkml/archive/master.zip
+# (2) unzip master.zip
+# (3) mv libkml-master libkml-1.1.0
+# (4) tar czf libkml-1.1.0.tar.gz libkml-1.1.0/*
+# (5) move libkml-1.1.0.tar.gz into ~/rpmbuild/SOURCES
+##
 
+BuildRequires:  expat-devel file curl-devel zlib-devel
 
 %description
 libkml library
