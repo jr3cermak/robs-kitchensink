@@ -7,4 +7,6 @@ SPECS: Misc RPM spec files for options we need today
 
   mapserver.spec    : Updated FC20 spec to add --with-kml
 
-
+TESTING
+* All these are known to work on:
+** Fedora Core 20
