@@ -12,6 +12,8 @@ Directory Project
 Arduino/
                                   : Experimental arduino sketches
 
+jupyterhub/                       : Experiments with jupyterhub (http://jupyter.org/)
+
 python/                           : Experimental python modules
 
           pyoai                   : fork of github.com/infrae/pyoai
