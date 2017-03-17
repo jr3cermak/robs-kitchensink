@@ -7,10 +7,11 @@ gets large enough.
 
 Current directories and projects:
 
-Directory Project
+Directory
+          Project
+--------- =======
 
-Arduino/
-                                  : Experimental arduino sketches
+Arduino/                          : Experimental arduino sketches
 
 jupyterhub/                       : Experiments with jupyterhub (http://jupyter.org/)
 
@@ -21,6 +22,9 @@ python/                           : Experimental python modules
           udunits                 : python udunits-2 API
           utils                   : miscellaneous code and functions
 
+RaspPi/                           : Useful Raspberry Pi information
+          Adafruit                : Useful and cloned materials from Adafruit
+
 rpmbuild/                         : one off rpm goodness
-  SPECS/                          : SPEC files
-  SOURCES/                        : SOURCE files
+  SPECS                           : SPEC files
+  SOURCES                         : SOURCE files
