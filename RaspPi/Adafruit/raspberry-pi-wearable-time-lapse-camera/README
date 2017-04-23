@@ -4,3 +4,20 @@ Project:
 Parts:
   Raspberry Pi Camera Board v2 - 8 Megapixels [P#3099/29.95/2017-03-12]
 
+Instructions
+
+The project page uses a shell script and associated software to capture
+images.   It would be nice to do all this in python.
+
+Required software items:
+  * OS: raspbian lite (2017-03-02-raspbian-jessie-lite.img)
+  * raspistill (native)
+
+apt-get install wiringpi
+
+For adaptation of the shell script to python:
+
+apt-get install python-picamera python-imaging
+
+Example use of picamera from www.raspberrypi.org:
+  https://www.raspberrypi.org/documentation/usage/camera/python/README.md
