@@ -11,7 +11,10 @@ Directory
           Project
 --------- =======
 
-Arduino/                          : Experimental arduino sketches
+Arduino/                          : Experimental arduino information and sketches
+  SparkFun/
+    RedBoard/                       RedBoard Sketches
+  QduinoMiniDev/                    Qtechknow Qduino Mini Development (MacOS, Arduino IDE 1.8.2)
 
 jupyterhub/                       : Experiments with jupyterhub (http://jupyter.org/)
 
